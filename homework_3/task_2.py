@@ -15,4 +15,4 @@ try:
     else:
         print("It must be four digits!")
 except ValueError:
-    print("It is not a number!")
+    print("It is not a number, try again!")
