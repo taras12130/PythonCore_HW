@@ -1,19 +1,16 @@
-# In the range from 1 to 10 determine 
-# even numbers that are divisible by 2,
-# odd numbers, which are divisible by 3,
-# numbers that are not divisible by 2 and 3.
+# Write a function that returns the largest number of two numbers 
+# (use DocStrings documentation strings in the function). 
 
-div_by_2_nums = []
-div_by_3_nums = []
-other_nums = []
-for i in range(1, 10):
-    if i % 2 == 0:
-        div_by_2_nums.append(str(i))
-    elif i % 2 != 0:
-        if i % 3 == 0:
-            div_by_3_nums.append(str(i))
+def largest_num(num1, num2):
+    """
+    This function returns the largest number of two numbers
+    """
+    if num1 == num2:
+        return num1
+    else:
+        if num1 > num2:
+            return num1
         else:
-            other_nums.append(str(i))
-print(f"Even numbers that are divisible by two: {' '.join(div_by_2_nums)}")
-print(f"Odd numbers that are divisible by three: {' '.join(div_by_3_nums)}")
-print(f"numbers that are not divisible by two and three: {' '.join(other_nums)}")
+            return num2
+print(largest_num(5, 7))
+print(largest_num.__doc__)
